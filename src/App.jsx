@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import ModernThreeBackground from "./ThreeBackground";
 import SearchForm from "./SearchForm";
+import { Analytics } from "@vercel/analytics/react";
 import ResultDisplay from "./ResultDisplay";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <ResultDisplay data={result} onReset={handleReset} />
         )}
       </div>
+      <Analytics />
     </div>
   );
 }
